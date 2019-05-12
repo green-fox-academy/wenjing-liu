@@ -19,9 +19,7 @@ import re
 
 pattern = re.compile('(^0$|^[1-9][0-9]?0?$)')
 
-print('0 test:', pattern.match('0'))
-print('9 test:', pattern.match('9'))
-print('55 test:', pattern.match('55'))
-print('100 test:', pattern.match('100'))
-print('101 test:', pattern.match('101'))
-print('-4 test:', pattern.match('-4'))
+testing_data = [0, 9, 55, 100, 101, -4]
+
+for value in testing_data:
+  print(f'{value} test: {pattern.match(value)}' )

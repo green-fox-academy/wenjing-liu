@@ -4,14 +4,10 @@ import re
 
 pattern_2 = re.compile('(\+|00)\s?36\s(1|[0-9][0-9])\s\d{3}\s\d{4}')
 
-print('+36 20 473 2746: ', pattern_2.match('+36 20 473 2746'))
-print('+36 30 217 4912: ', pattern_2.match('+36 30 217 4912'))
-print('00 36 70 381 1288: ', pattern_2.match('00 36 70 381 1288'))
-print('00 36 31 471 2818: ', pattern_2.match('00 36 31 471 2818'))
-print('+36 20 3173 471: ', pattern_2.match('+36 20 3173 471'))
-print('+49 20 483 1273: ', pattern_2.match('+49 20 483 1273'))
-print('36 70 381 2183: ', pattern_2.match('36 70 381 2183'))
+testing_data = ['+36 20 473 274', '+36 30 217 4912', '00 36 70 381 1288', '00 36 31 471 2818', '+36 20 3173 471', '+49 20 483 1273', '36 70 381 2183']
 
+for value in testing_data:
+  print(f'{value} test: {pattern_2.match(value)}')
 
 
 """

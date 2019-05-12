@@ -9,7 +9,7 @@ Create a regular expression that matches if for the following words:
 
 import re
 
-pattern = re.compile('(admin|Admin)')
+pattern = re.compile('[Aa]dmin')
 is_Admin_matched = pattern.match('Admin')
 print('\'Admin\' test:', is_Admin_matched)
 is_admin_matched = pattern.match('admin')
