@@ -1,0 +1,23 @@
+Hi, I'm Jane Doe, 30 year old female.
+My goal is: Live for the moment!
+Be a junior software developer.
+Hi, I'm Jane Doe, a 30 year old female intermediate mentor.
+Educate brilliant junior software developers.
+Hi, I'm Jane Doe, a 30 year old female who represents Google and hired 0 students so far.
+Hire brilliant junior software developers.
+Hi, I'm Jane Doe, a 30 year old female who represents Google and hired 1 students so far.
+Hi, I'm Mark, 46 year old male.
+My goal is: Live for the moment!
+Hi, I'm Jane Doe, 30 year old female.
+My goal is: Live for the moment!
+Hi, I'm John Doe, 20 year old male from BME who skipped 0 days from the course already.
+Be a junior software developer.
+Hi, I'm Jane Doe, 30 year old female from The School of Life who skipped 3 days from the course already.
+Be a junior software developer.
+Hi, I'm Gandhi, a 148 year old male senior mentor.
+Educate brilliant junior software developers.
+Hi, I'm Jane Doe, a 30 year old female intermediate mentor.
+Educate brilliant junior software developers.
+Hi, I'm Elon Musk, a 46 year old male who represents SpaceX and hired 5 students so far.
+Hire brilliant junior software developers.
+The AWESOME cohort has 2 students and 2 mentors.
