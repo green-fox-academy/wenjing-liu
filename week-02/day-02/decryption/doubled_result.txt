@@ -1,0 +1,22 @@
+The Zen of Python
+by Tim Petrs
+
+Beautifl is betr than ugly.
+Explict is betr than implct.
+Simple is betr than complex.
+Complex is betr than compliated.
+Flat is betr than nestd.
+Sparse is betr than dens.
+Readbilty counts.
+Special case aren't special enough to break the rules.
+Althoug practily beats purity.
+Eros should nevr pas silenty.
+Unles explicty silencd.
+In the face of ambiguty, refus the tempaion to gues.
+Ther should be one- and prefably only one -obvius way to do it.
+Althoug tha way may not be obvius at first unles you're Dutch.
+Now is betr than nevr.
+Althoug nevr is often betr than *right now.
+If the implentao is hard to explain, it's a bad idea.
+If the implentao is easy to explain, it may be a god idea.
+Namespc are one honkig great idea - let's do more of those!
