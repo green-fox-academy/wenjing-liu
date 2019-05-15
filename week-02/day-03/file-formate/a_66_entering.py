@@ -8,7 +8,7 @@ def a_six_entering(src, des):
         content_map = {}
         reader = csv.reader(file, delimiter=',')
         for row in reader:
-          if not row:
+          if not row or row[5] != 'A66 - 04 FÕBEJÁRAT (F-1) Door #1':
             continue
           door_num = row[-1]
           content_map[door_num] = content_map.get(door_num, {})
