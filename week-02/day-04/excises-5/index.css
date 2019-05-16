@@ -1,0 +1,41 @@
+.box-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.box-group:first-child{
+  margin-bottom: 20px;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 34px;
+  text-align: center;
+  padding: 20px 100px;
+  border: blue 10px solid;
+  background-color: darkcyan;
+  background-image: url('./the-duck.png');
+  background-size: 150px 100px;
+  background-repeat: no-repeat;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.box__red {
+  background-color: #da8989;
+  background-position: left center;
+}
+
+.box__purple {
+  background-color: #793479;
+  background-position: center; 
+}
+
+.box__grey {
+  background-color: grey;
+  
+  background-position: right bottom; 
+}

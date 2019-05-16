@@ -1,0 +1,30 @@
+.article-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.article__header {
+  font-size: 32px;
+  color: red;
+  margin-bottom: 0px;
+}
+
+.article__section {
+
+}
+
+.article__section--header {
+  font-size: 24px;
+  color: purple;
+}
+
+.article__section--paragraph {
+  text-align: justify;
+}
+.article__section--list {
+
+}
+
+.list__item--pink {
+  color: #f12bb1;
+}

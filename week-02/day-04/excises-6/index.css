@@ -1,0 +1,15 @@
+.box-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.box {
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 14px;
+  border: 2px solid black;
+}
+
+.box:hover {
+  background-color: red;
+}

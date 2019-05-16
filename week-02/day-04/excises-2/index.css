@@ -1,0 +1,27 @@
+.box-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  border: blue 10px solid;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  background-color: darkcyan;
+  font-size: 34px;
+  padding: 20px;
+}
+
+.box__red {
+  background-color: red;
+}
+.box__yellow {
+  background-color: yellow;
+}
+.box__aqua {
+  background-color: aqua
+}
+.box__blue {
+  background-color: rgb(16, 104, 187);
+}
