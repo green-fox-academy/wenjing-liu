@@ -16,6 +16,7 @@ class Aircraft:
     else: 
       self.ammo += amount_ammo
       return 0
+  
   def get_all_damage(self):
     return self.ammo * self.base_damage
   

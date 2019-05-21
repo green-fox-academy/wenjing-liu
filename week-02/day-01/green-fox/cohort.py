@@ -6,6 +6,7 @@ class Cohort:
     self.name = name
     self.students = []
     self.mentors = []
+  
   def add_student(self, student):
     if isinstance(student, Student):
       self.students.append(student)

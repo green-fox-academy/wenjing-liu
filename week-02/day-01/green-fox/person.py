@@ -3,8 +3,10 @@ class Person:
     self.name = name
     self.age = int(age)
     self.gender = gender
+  
   def introduce(self):
     print(f'Hi, I\'m {self.name}, {self.age} year old {self.gender}.')
+  
   def get_goal(self):
     print('My goal is: Live for the moment!')
 

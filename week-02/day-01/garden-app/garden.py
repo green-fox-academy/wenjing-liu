@@ -4,22 +4,17 @@ from tree import Tree
 class Garden:
   def __init__(self, name):
     self.name = name
-    self.trees = []
-    self.flowers = []
+    self.plants = []
+  
   def add_plant(self, plant):
-    if isinstance(plant, Flower):
-      self.flowers.append(plant)
-    elif isinstance(plant, Tree):
-      self.trees.append(plant)
+    self.plants.append(plant)
+  
   def water(self, water_amount):
     print(f'Water with {water_amount}')
     needs_water_plant = []
-    for index in range(len(self.flowers)):
-      if(self.flowers[index].need_water()):
-        needs_water_plant.append(self.flowers[index])
-    for index in range(len(self.trees)):
-      if(self.trees[index].need_water()):
-        needs_water_plant.append(self.trees[index])
+    for index in range(len(self.plants)):
+      if(self.plants[index].need_water()):
+        needs_water_plant.append(self.plants[index])
     per_water = water_amount / len(needs_water_plant)
     for index in range(len(needs_water_plant)):
       needs_water_plant[index].absorb_water(per_water)
@@ -27,10 +22,8 @@ class Garden:
   
   def __str__(self):
     result = ''
-    for i in range(len(self.flowers)):
-      result += self.flowers[i].__str__() + '\n'
-    for j in range(len(self.trees)):
-      result += self.trees[j].__str__() + '\n'
+    for i in range(len(self.plants)):
+      result += self.plants[i].__str__() + '\n'
     return result
 
 flower_1 = Flower('yellow')

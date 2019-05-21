@@ -9,6 +9,7 @@ class Ship:
   def fill_ship(self, captain, crew):
     self.captain = captain
     self.crew = crew
+  
   def battle(self, other_ship):
     self_rum = self.captain.drink_times
     self_alive = self.counter_alive()
@@ -40,6 +41,7 @@ class Ship:
       if not self.crew[index].is_died:
         counter_alive += 1
     return counter_alive 
+  
   def __str__(self):
     string = 'Captains consumed rum: ' + str(self.captain.drink_times)
     if self.captain.is_died:

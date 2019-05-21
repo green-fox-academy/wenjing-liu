@@ -1,6 +1,7 @@
 class Station:
   def __init__(self, gas_amount = 10000):
     self.gas_amount = gas_amount
+  
   def refill(self, car, amount):
     self.gas_amount -= amount
     result = car.fill(amount)

@@ -3,14 +3,18 @@ from blog_post import BlogPost
 class Blog:
   def __init__(self):
     self.blog_list = []
+  
   def add(self, blog_post):
     self.blog_list.append(blog_post)
+  
   def delete(self, index):
     if self.blog_list[index]:
       self.blog_list.pop(index)
+  
   def update(self, index, blog_post):
     if self.blog_list[index]:
       self.blog_list[index] = blog_post
+  
   def __str__(self):
     result = ''
     for index in range(len(self.blog_list)):

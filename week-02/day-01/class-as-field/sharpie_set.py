@@ -3,19 +3,23 @@ from sharpie import Sharpie
 class SharpieSet:
   def __init__(self):
     self.sharpies = []
+  
   def add(self, sharpie):
     self.sharpies.append(sharpie)
+  
   def count_usable(self):
     counter = 0
     for sharpie in self.sharpies:
       if sharpie.ink_amount > 0:
         counter += 1
     return counter
+  
   def remove_trash(self):
     for index in range(len(self.sharpies)):
       if (self.sharpies[index].ink_amount <= 0):
         self.sharpies[index] = None
     self.sharpies.remove(None)
+  
   def __str__(self):
     result = ''
     for i in range(0, len(self.sharpies)):

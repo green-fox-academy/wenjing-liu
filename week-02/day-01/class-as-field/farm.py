@@ -4,12 +4,14 @@ class Farm:
   def __init__(self, size = 10):
     self.animal_list = []
     self.size = size
+  
   def breed(self):
     if (len(self.animal_list) < self.size):
       animal = Animal()
       self.animal_list.append(animal)
     else:
       print('The farm is full, you need slaught before breed')
+  
   def slaughter(self):
     to_remove_index = 0
     for index in range(len(self.animal_list)):

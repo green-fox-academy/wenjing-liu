@@ -132,3 +132,5 @@ dmypy.json
 
 # debugger
 .vscode
+
+.DS_Store

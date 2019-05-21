@@ -2,13 +2,16 @@ class Counter:
   def __init__(self, num = 0):
     self.num = int(num)
     self._initial_num = self.num
+  
   def add(self, number = 1):
     if isinstance(number, (int, float)):
       self.num += int(number)
     else:
       raise Exception('You must input number')
+  
   def get(self):
     return self.num
+  
   def reset(self):
     self.num = self._initial_num
   
