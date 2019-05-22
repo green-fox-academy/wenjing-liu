@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+{% endblock %}
+
+{% block content %}
+  
+  <h1>Please login</h1>
+  <br>
+  <form action="" method="post" class="login">
+    <input type="text" placeholder="Username" class="login__username" name="username" value="{{
+      request.form.username }}">
+    <input type="password" placeholder="Password" class="login__password" name="password" value="{{
+      request.form.password }}">
+    <input class="btn btn-default" type="submit" value="login">
+  </form>
+  {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.login__username, .login__password {
+  height: 30px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.login__password {
+
+}
+
+.btn {
+  width: 70px;
+  height: 30px;
+  font-size: 20px;
+  background-color: #9bc5c5;
+}
+
+.btn-default {
+
+}
