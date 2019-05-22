@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+  <h3 class="hint--info">Search</h3>
+  <br>
+  <form action="" method="get" class="search__form">
+    <select name="key" class="key__select">
+      <option value="id" class="key__select--option">id</option>
+      <option value="name" class="key__select--option">name</option>
+      <option value="price" class="key__select--option">price</option>
+      <option value="qty" class="key__select--option">quantity</option>
+    </select>
+    <input type="text" class="search__input" placeholder=""name="value" value="{{
+      request.form.value }}">
+    <input class="search__btn" type="submit" value="Search">
+  </form>
+  {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+  {% endif %}
+
+  <div class="search__info">Last Search: {{params.key}}, {{params.value}}</div>
+  {% if results %}
+    <table style="width:100%" class="result__table">
+      <thead>
+        <th>id</th>
+        <th>name</th> 
+        <th>price</th>
+        <th>qty</th>
+      </thead>
+      {% for item in results %}
+        <tr>
+          <td>{{item['id']}}</td>
+          <td>{{item['name']}}</td> 
+          <td>{{item['price']}}</td>
+          <td>{{item['qty']}}</td>
+        </tr> 
+      {% endfor %}
+    </table>
+  {% else %}
+    <div class="no_record">No Records</div>
+  {% endif %}
+{% endblock %}
