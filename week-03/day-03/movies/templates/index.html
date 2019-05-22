@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+  <h3 class="hot-movies">Hot Movies</h3>
+  <ul class="movie__list">
+  {% for movie in movies %}
+   <li class="movie__item">
+     <img src="{{ url_for('static', filename='images/'+movie['image']) }}">
+     <div class="short-intro">
+        <a href="/movies/{{movie['id']}}">{{movie['title']}}</a>
+        <div class="genres">{{movie['genres']}}</div>
+      </div>
+   </li>
+  {% endfor %}
+  </ul>
+{% endblock %}
