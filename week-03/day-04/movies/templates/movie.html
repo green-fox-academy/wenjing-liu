@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/movie.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="movie__detail">
+    <div class="movie__title">Title: {{movie['title']}}</div>
+    <div class="movie__detail_intro">
+      <div class="movie__image"><img src="{{ url_for('static', filename='images/' + movie['image']) }}"></div>
+      <div>
+          <div class="movie__genres">{{movie['genres']}}</div>
+          <div class="movie__summary">{{movie['summary']}}</div>
+      </div>
+      
+    </div>
+    
+  </div>
+{% endblock %}

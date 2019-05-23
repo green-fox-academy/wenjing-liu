@@ -1,0 +1,32 @@
+.movie__detail {
+  border: dotted 1px yellow;
+}
+
+.movie__title {
+  font-size: 24px;
+  margin-bottom: 20px
+}
+
+.movie__detail_intro {
+  display: flex;
+}
+.movie__image {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.movie__image img {
+  width: 250px;
+  margin-right: 20px;
+}
+
+.movie__genres {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.movie__summary {
+  font-size: 20px;
+  text-align: justify;
+}

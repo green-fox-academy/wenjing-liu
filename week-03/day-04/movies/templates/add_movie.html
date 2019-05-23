@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/add_movie.css') }}">
+{% endblock %}
+
+{% block content %}
+  <h3 class="hint--info">Add a movie</h3>
+  <br>
+  <form action="/api/movies" method="post" class="movie">
+    <input type="hidden" placeholder="api-key" class="movie__title" name="x-api-key" value="bwqMA2tksVHWx4e0Fbx36R1UTSsW0LKN">
+    <input type="text" placeholder="Title" class="movie__title" name="title" value="{{
+      request.form.title }}">
+    <input type="text" placeholder="Year" class="movie__year" name="year" value="{{request.form.year }}">
+    <input type="text" placeholder="Genres" class="movie__genres" name="genres" value="{{request.form.genres }}">
+    <textarea type="text" placeholder="Summary" class="movie__summary" name="summary" value="{{request.form.summary }}"></textarea>
+
+    <input class="btn btn-default" type="submit" value="Submit">
+  </form>
+  {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}
+  {% endif %}
+{% endblock %}

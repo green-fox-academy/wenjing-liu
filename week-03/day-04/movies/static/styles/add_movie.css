@@ -1,0 +1,26 @@
+.movie {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.movie__title, .movie__year, .movie__genres {
+  height: 30px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.movie__summary {
+  height: 200px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.btn {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  background-color: #9bc5c5;
+}
+
+.btn-default {
+
+}
