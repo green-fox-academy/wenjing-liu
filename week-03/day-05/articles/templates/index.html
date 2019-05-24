@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="articles">
+  {%for article in articles %}
+      <p>
+        {{article['content']|truncate}}
+      </p>
+    {% if article['seen']%}
+      <p>Seen by
+        {% if article['seen']|length == 1%}
+          {{article['seen'][0]}}
+        {% else %}
+        {{article['seen'][0:-1]|join(', ')}} and {{article['seen'][-1]}}
+        {% endif %}
+      </p>
+    {% else %}
+      <p>No one has seen this article before.</p>
+    {% endif %}
+    
+  {%endfor%}
+</div>
+{% endblock %}

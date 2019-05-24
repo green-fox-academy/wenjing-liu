@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="articles">
+    <table>
+        <tr>
+          <th>#</th>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+        {%for prodcut in products%}
+        <tr>
+          <td>{{loop.index}}</td>
+          <td>{{prodcut[0]}}</td>
+          <td>{{'%0.2f'|format(prodcut[1]|float)}} ¥</td>
+        </tr>
+        {%endfor%}
+      </table>
+</div>
+{% endblock %}
