@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/layout.css') }}">
+      <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+      {% block head %}{% endblock %}
+      <title>Product</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <img class="header-logo" src="{{ url_for('static', filename='images/PinClipart.com_graphic-clip-art_7903.png') }}">
+      <ol class="header-navigator">
+        <li class="navigator__item"><a href="/">Home</a></li>
+        <li class="navigator__item"><a href="/blogs"p>Blogs</a></li>
+        <li class="navigator__item"><a href="/archive"p>Archive</a></li>
+        <li class="navigator__item"><a href="/about"p>About</a></li>
+        <li class="navigator__item"><a href="/tags"p>Tags</a></li>
+      </ol>
+    </header>
+
+    <div id="content" class="content">{% block content %}{% endblock %}</div>
+    
+    <footer class="footer">
+      <ul class="footer__navigation">
+        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+      </ul>
+      <p class="footer__copyright">
+        Built by <a href="#" class="footer__link">Claire Liu</a>
+      </p>
+    </footer>
+  </body>
+</html>
