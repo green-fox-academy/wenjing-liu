@@ -1,16 +1,17 @@
 def create_todo_table(connection):
   cursor = connection.cursor()
   todo_table_exsiting = cursor.execute("select * from information_schema.tables where table_name=%s", ('todo',))
-  if not bool(todo_table_exsiting):
-    create_table_query = '''CREATE TABLE todo
-                (id  SERIAL PRIMARY KEY,
-                state TEXT    NOT NULL,
-                description TEXT,
-                CONSTRAINT chk_state CHECK (state IN ('TODO', 'IN_PROCESS', 'DONE'))
-                ); '''
-    cursor.execute(create_table_query)
-    connection.commit()
-    cursor.close()
+  if bool(todo_table_exsiting):
+    return
+  create_table_query = '''CREATE TABLE IF NOT EXISTS todo
+              (id  SERIAL PRIMARY KEY,
+              state TEXT    NOT NULL,
+              description TEXT,
+              CONSTRAINT chk_state CHECK (state IN ('TODO', 'IN_PROCESS', 'DONE'))
+              ); '''
+  cursor.execute(create_table_query)
+  connection.commit()
+  cursor.close()
 
 # read
 
