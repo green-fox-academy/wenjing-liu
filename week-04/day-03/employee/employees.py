@@ -98,20 +98,25 @@ def db_manipulation(connection):
   print('Which first name is the most common among the younger (<30) employees?\n', most_common_names)
 
   # - What is the median salary in the company?
-  query_median = 'SELECT avg(monthly_salary) FROM employees;'
+  query_median = '''select AVG(DISTINCT monthly_salary) from (
+    select T1.monthly_salary from employees T1,employees T2
+    group by T1.monthly_salary
+    having sum(case when T2.monthly_salary >= T1.monthly_salary then 1 else 0 end) >= count(*)/2
+    and sum(case when T2.monthly_salary <= T1.monthly_salary then 1 else 0 end) >= count(*)/2
+    ) tmp '''
   cursor.execute(query_median)
   print('What is the median salary in the company? ', cursor.fetchone()[0])
 
   # - How many employee earns more than the average?
   #   - do not hard-code the average
   #   - use one query
-  query_more_than_median = 'select count(*) from (select * from employees, (SELECT avg(monthly_salary)as avg FROM employees) as tmp where employees.monthly_salary > tmp.avg) tmp;'
+  query_more_than_median = f'''select count(*) from (select * from employees, ({query_median}) as tmp_1 where employees.monthly_salary > tmp_1.avg) tmp;'''
   cursor.execute(query_more_than_median)
   print('How many employee earns more than the average? ',cursor.fetchone()[0])
 
   # - Increase the salary by monthly $100 for everybody who earns less than the median
 
-  increase_salary_query = 'UPDATE employees SET monthly_salary = monthly_salary + 100 WHERE monthly_salary < (SELECT avg(monthly_salary)as avg FROM employees);'
+  increase_salary_query = f'UPDATE employees SET monthly_salary = monthly_salary + 100 WHERE monthly_salary < ({query_median});'
   cursor.execute(increase_salary_query)
   connection.commit()
   print('Increase the salary by monthly $100 for everybody who earns less than the median: ', cursor.rowcount, ' employees update')
