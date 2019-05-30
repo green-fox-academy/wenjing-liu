@@ -1,0 +1,31 @@
+.user-msg-counter {
+
+}
+
+.reaction-counter {
+
+}
+.reaction-user-counter {
+
+}
+
+
+#userMsgCounter .nvd3-svg{
+  overflow: visible;
+  height: 500px;
+}
+
+#reactionCounter .nvd3-svg {
+  overflow: visible;
+  height: 500px;
+}
+#reactionUserCounter .nvd3-svg {
+  overflow: visible;
+  height: 600px;
+}
+
+#avgMsgCounterHourDay .nvd3-svg {
+  overflow: visible;
+  height: 500px;
+}
+
