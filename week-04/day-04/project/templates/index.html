@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+  <h1>This is Home page</h1>
+{% endblock %}
+
+
+
+{% block script_block %}
+  <script src="../js/index.js" type="module"></script>
+{% endblock %}
