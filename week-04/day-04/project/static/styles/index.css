@@ -29,3 +29,13 @@
   height: 500px;
 }
 
+#thanksRatioInAll .nvd3-svg {
+  overflow: visible;
+  height: 500px;
+}
+
+#thankedUserCounter .nvd3-svg {
+  overflow: visible;
+  height: 500px;
+}
+

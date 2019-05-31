@@ -5,35 +5,17 @@
 {% endblock %}
 
 {% block content %}
-  <div class="avg-msg-counter-hour-day">
-    <h1>Test </h1>
-    <div id="chart"class='with-3d-shadow with-transitions'>
-      <svg></svg>
-    </div>
-  </div>
-
-  <div class="user-msg-counter">
-    <h1>Top 20 Most Active Message Sender</h1>
-    <div id="userMsgCounter" class='with-3d-shadow with-transitions'>
-      <svg></svg>
-    </div>
-  </div>
-  <div class="reaction-counter">
-    <h1>Top 10 Reactions Used</h1>
-    <div id="reactionCounter"class='with-3d-shadow with-transitions'>
-      <svg></svg>
-    </div>
-  </div>
-  <div class="reaction-user-counter">
-    <h1>Top 10 Most Reactions Users</h1>
-    <div id="reactionUserCounter"class='with-3d-shadow with-transitions'>
-      <svg></svg>
-    </div>
-  </div>
-
+ <div style="font-weight: bold;"> Data: {{data_info['msg_in_total']}} Messages, {{data_info['user_in_total']}} Users</div>
   <div class="avg-msg-counter-hour-day">
     <h1>Avg Msg Number In Hour (From {{start_date}} To {{end_date}}) </h1>
     <div id="avgMsgCounterHourDay"class='with-3d-shadow with-transitions'>
+      <svg></svg>
+    </div>
+  </div>
+
+  <div class="avg-msg-counter-hour-day">
+    <h1>Thanks Msg Ratio in Msg</h1>
+    <div id="thanksRatioInAll"class='with-3d-shadow with-transitions'>
       <svg></svg>
     </div>
   </div>
@@ -43,9 +25,6 @@
 {% endblock %}
 
 {% block javascript %}
-<script type="module" src="{{url_for('static', filename='js/user_msg_counter.js') }}"></script>
-<script type="module" src="{{url_for('static', filename='js/reaction_counter.js') }}"></script>
-<script type="module" src="{{url_for('static', filename='js/reaction_user_counter.js') }}"></script>
 <script type="module" src="{{url_for('static', filename='js/avg_msg_counter_hour_day.js') }}"></script>
-<script type="module" src="{{url_for('static', filename='js/bubble_test.js') }}"></script>
+<script type="module" src="{{url_for('static', filename='js/thank_to_all_ratio.js') }}"></script>
 {% endblock %}

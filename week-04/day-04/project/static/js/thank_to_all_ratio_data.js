@@ -1,0 +1,1 @@
+export default{"thank_count": 503, "total_count": 581}

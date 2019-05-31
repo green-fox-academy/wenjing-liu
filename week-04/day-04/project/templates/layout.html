@@ -8,17 +8,18 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='styles/layout.css') }}">
       <link rel="shortcut icon" type="image/png" href="img/favicon.png">
       {% block head %}{% endblock %}
-      <title>Product</title>
+      <title>Slack Anaylsis</title>
   </head>
   <body class="container">
     <header class="header">
       <img class="header-logo" src="{{ url_for('static', filename='images/PinClipart.com_graphic-clip-art_7903.png') }}">
       <ol class="header-navigator">
-        <li class="navigator__item"><a href="/">Home</a></li>
-        <li class="navigator__item"><a href="/blogs"p>Blogs</a></li>
-        <li class="navigator__item"><a href="/archive"p>Archive</a></li>
-        <li class="navigator__item"><a href="/about"p>About</a></li>
-        <li class="navigator__item"><a href="/tags"p>Tags</a></li>
+        <li class="navigator__item"><a href="/">Messages</a></li>
+        <li class="navigator__item"><a href="/users"p>Users</a></li>
+        <li class="navigator__item"><a href="/reactions"p>Emoji</a></li>
+        <!-- <li class="navigator__item"><a href="/archive"p>Archive</a></li> -->
+        
+        <li class="navigator__item"><a href="/mentions"p>Mentions</a></li>
       </ol>
     </header>
 

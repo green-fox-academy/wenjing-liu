@@ -1,27 +1,5 @@
 import reaction_counter from './reaction_counter_data.js'
 
-
-
-function formate_data(reaction_counter) {
-  data =[]
-  var color = d3.scale.category20()
-  var counter = 0
-  reaction_counter.forEach(item => {
-    counter += 1
-    data.push({
-      name: item['reaction'],
-      value: item['count'],
-      props:{
-        abnormal:false,
-        abnormalFlow:0,
-        color: color(counter%20),
-        using:false
-      }
-    })
-  })
-  return data
-}
-
 /*
  *依赖d3.min.v3x.js
  *依赖jquery-1.11.0.min.js
@@ -208,231 +186,6 @@ function dataHandle(data){
 	 */
 	return result;
 }
-var data = [{
-	name:"test",
-	value:"1000",
-	props:{
-		abnormal:false,
-		abnormalFlow:0,
-		color:"#2296F4",
-		using:false
-	}
-},{
-	name:"单位2",
-	value:"289",
-	props:{
-		abnormal:true,
-		"abnormalFlow":89,
-		"color":"#EA3344",
-		"using":true
-	}
-},{
-	"name":"单位3",
-	"value":"209",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位4",
-	"value":"209",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位5",
-	"value":"209",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位6",
-	"value":"209",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位7",
-	"value":"209",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位8",
-	"value":"209",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":true
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":true
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4",
-		"using":false
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-},{
-	"name":"单位9",
-	"value":"100",
-	"props":{
-		"abnormal":false,
-		"abnormalFlow":0,
-		"color":"#2296F4"
-	}
-}];
 
 function createInfoTip(d){
 				var html = '<div class="node-info"><ul>';
@@ -445,30 +198,51 @@ function createInfoTip(d){
 				
 				return html;
       }
-      
-      data = formate_data(reaction_counter)
-			var option = {
-				data:data,
-				conEle:'#bubble',
-				width:1000,
-				height:500,
-				padding:1
+
+function formate_data(reaction_counter) {
+	data =[]
+	var color = d3.scale.category20()
+	var counter = 0
+	reaction_counter.forEach(item => {
+		counter += 1
+		data.push({
+			name: item['reaction'],
+			value: item['count'],
+			props:{
+				abnormal:false,
+				abnormalFlow:0,
+				color: color(counter%20),
+				using:false
 			}
-			
-			var bubble = new Bubble(option);
-			bubble.mouseenter = function(d,node){
-				var $con = $("#bubble");
-				var rectBox = $con[0].getBoundingClientRect();
-				d3.select(node).style("cursor","pointer");
-				
-				$con.append(createInfoTip(d));
-				$(".node-info").css({
-					left:d3.event.x+20-rectBox.left,
-					top:d3.event.y+20-rectBox.top
-				}).show();
-			}
-			bubble.mouseleave = function(d){
-				$(".node-info").remove();
-			}
-			bubble.init();
+		})
+	})
+	return data
+}			
+
+
+
+var data = formate_data(reaction_counter)
+var option = {
+	data:data,
+	conEle:'#bubble',
+	width:1000,
+	height: 700,
+	padding:1
+}
+var bubble = new Bubble(option);
+bubble.mouseenter = function(d,node){
+	var $con = $("#bubble");
+	var rectBox = $con[0].getBoundingClientRect();
+	d3.select(node).style("cursor","pointer");
+	
+	$con.append(createInfoTip(d));
+	$(".node-info").css({
+		left:d3.event.x+20-rectBox.left,
+		top:d3.event.y+20-rectBox.top
+	}).show();
+}
+bubble.mouseleave = function(d){
+	$(".node-info").remove();
+}
+bubble.init();
 

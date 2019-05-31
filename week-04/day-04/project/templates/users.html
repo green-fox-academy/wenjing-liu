@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="user-msg-counter">
+    <h1>Top 20 Most Active Message Sender</h1>
+    <div id="userMsgCounter" class='with-3d-shadow with-transitions'>
+      <svg></svg>
+    </div>
+  </div>
+  
+  
+  <div class="reaction-user-counter">
+    <h1>Top 10 Most Reactions Users</h1>
+    <div id="reactionUserCounter"class='with-3d-shadow with-transitions'>
+      <svg></svg>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block javascript %}
+<script type="module" src="{{url_for('static', filename='js/user_msg_counter.js') }}"></script>
+<script type="module" src="{{url_for('static', filename='js/reaction_user_counter.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="reaction-counter">
+    <h1>Top 10 Thanks Msg Received Users</h1>
+    <div id="thankedUserCounter"class='with-3d-shadow with-transitions'>
+      <svg></svg>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+<script type="module" src="{{url_for('static', filename='js/mentioned_users_for_thanks.js') }}"></script>
+{% endblock %}
