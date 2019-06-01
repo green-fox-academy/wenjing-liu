@@ -89,11 +89,15 @@ def avg_msg_counter_hour_day():
   connection.close()
   data = []
   for item in result:
+    hour = int(item[0]) - 6
+    if hour < 0:
+      hour = 24 + hour
     data.append({
-      'hour': int(item[0]),
+      'hour': hour,
       'count': item[1]
     })
-  return [data, start_date[0], end_date[0]]
+    data_1 = sorted(data, key = lambda el: el['hour'])
+  return [data_1, start_date[0], end_date[0]]
 
 
 

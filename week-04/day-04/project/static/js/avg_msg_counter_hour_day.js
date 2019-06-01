@@ -37,7 +37,7 @@ function formate_data(data) {
   return [
     {
       values: result,
-      key: 'msg in hour avg day',
+      key: 'msg count of hour',
       color: '#ff7f0e'
     }
   ]

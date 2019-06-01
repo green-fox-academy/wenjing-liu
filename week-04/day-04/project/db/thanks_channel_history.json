@@ -1,38 +1,29 @@
 [
   {
-  "client_msg_id": "2e3e16f0-928e-4ad9-b28a-3a29f1f2f01d",
-  "type": "message",
-  "text": "<@UDZNG4FL7> thank you the typo, it made my day :pray::joy:",
-  "user": "UB1ATRBQV",
-  "ts": "1558973913.006400",
-  "thread_ts": "1558973913.006400",
-  "reply_count": 1,
-  "reply_users_count": 1,
-  "latest_reply": "1558974232.007700",
-  "reply_users": [
-  "UDZNG4FL7"
-  ],
-  "replies": [
-  {
-  "user": "UDZNG4FL7",
-  "ts": "1558974232.007700"
-  }
-  ],
-  "subscribed": false,
-  "reactions": [
-  {
-  "name": "smile",
-  "users": [
-  "UDZNG4FL7",
-  "UGLGS3TQS",
-  "UC7JZG36C",
-  "U15CJU8U8",
-  "UEGB506PJ",
-  "UB29NHSKH"
-  ],
-  "count": 6
-  }
-  ]
+    "client_msg_id": "2e3e16f0-928e-4ad9-b28a-3a29f1f2f01d",
+    "type": "message",
+    "text": "<@UDZNG4FL7> thank you the typo, it made my day :pray::joy:",
+    "user": "UB1ATRBQV",
+    "ts": "1558973913.006400",
+    "thread_ts": "1558973913.006400",
+    "reply_count": 1,
+    "reply_users_count": 1,
+    "latest_reply": "1558974232.007700",
+    "reply_users": [ "UDZNG4FL7"],
+    "replies": [
+      {
+      "user": "UDZNG4FL7",
+      "ts": "1558974232.007700"
+      }
+    ],
+    "subscribed": false,
+    "reactions": [
+      {
+      "name": "smile",
+      "users": [ "UDZNG4FL7", "UGLGS3TQS", "UC7JZG36C", "U15CJU8U8", "UEGB506PJ", "UB29NHSKH" ],
+      "count": 6
+      }
+    ]
   },
   {
   "client_msg_id": "5c9fc5fd-2317-4048-9d62-f83c469436ce",
