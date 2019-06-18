@@ -186,7 +186,7 @@ def train_gaussian_naive_bayes():
   gnb.fit(X_train, y_train)  
   y_test_pre = gnb.predict(X_test)
   print("Gaussian naive bayes Accuracy:",metrics.accuracy_score(y_test, y_test_pre))
-
+  
   raw_test_data['Survived'] = pd.Series(gnb.predict(test_data))
   result = raw_test_data[['PassengerId', 'Survived']]
   result.to_csv('gaussian_naive_bayes_result.csv', index=False)
