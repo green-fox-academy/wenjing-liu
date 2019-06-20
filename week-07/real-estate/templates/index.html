@@ -1,13 +1,131 @@
 {% extends "layout.html" %}
 
 {% block head%}
-<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
 
 {% block content %}
-  <h1>Hello, Mr Rich Man</h1>
+  <div class="ui grid">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
+      <h2 class="ui header">Hello, Mr Rich Man, Estimate your property</h2>
+      <h3 class="ui dividing header">Please fill your property information</h3>
+      <form class="ui fluid form segment property-info" action="/estimate" method="post">
+          <div class="required field">
+            <label>Your post code</label>
+            <input type="text" name="post_code" placeholder="Post code">
+          </div>
+
+          <div class="inline fields">
+            <label>Is it a new one?:</label>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="new_home" value="1">
+                <label>Yes</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="new_home" checked="checked" value="0">
+                <label>No</label>
+              </div>
+            </div> 
+          </div>
+
+        <div class="required field">
+            <label>Your Property Type:</label>
+            <select class="ui search dropdown" name="property_type">
+              <option value="Barn conversion">Barn conversion</option>
+              <option value="Block of flats">Block of flats</option>
+              <option value="Bungalow">Bungalow</option>
+              <option value="Chalet">Chalet</option>
+              <option value="Cottage">Cottage</option>
+              <option value="Country house">Country house</option>
+              <option value="Detached bungalow">Detached bungalow</option>
+              <option value="Detached house">Detached house</option>
+              <option value="End terrace house">End terrace house</option>
+              <option value="Equestrian property">Equestrian property</option>
+              <option value="Farm">Farm</option>
+              <option value="Farmhouse">Farmhouse</option>
+              <option value="Flat">Flat</option>
+              <option value="Hotel/guest house">Hotel/guest house</option>
+              <option value="Houseboat">Houseboat</option>
+              <option value="Land">Land</option>
+              <option value="Link-detached house">Link-detached house</option>
+              <option value="Lodge">Lodge</option>
+              <option value="Maisonette">Maisonette</option>
+              <option value="Mews house">Mews house</option>
+              <option value="Mobile/park home">Mobile/park home</option>
+              <option value="Parking/garage">Parking/garage</option>
+              <option value="Semi-detached bungalow">Semi-detached bungalow</option>
+              <option value="Semi-detached house">Semi-detached house</option>
+              <option value="Studio">Studio</option>
+              <option value="Terraced bungalow">Terraced bungalow</option>
+              <option value="Terraced house">Terraced house</option>
+              <option value="Town house">Town house</option>
+              <option value="Villa">Villa</option>
+            </select>
+        </div>
+
+        <div class="two fields">
+          <div class="field">
+            <label>Number of bedrooms</label>
+            <input type="number"min="0" name="num_bedrooms" value="0">
+          </div>
+          <div class="field">
+            <label>Number of bathrooms</label>
+            <input type="number" min="0" name="num_bathrooms" value="0">
+          </div>
+        </div>
+
+        <div class="two fields">
+          <div class="field">
+            <label>Number of floors</label>
+            <input type="number" min="0" name="num_floors" value="0">
+          </div>
+          <div class="field">
+            <label>Number of receptions</label>
+            <input type="number" min="0" name="num_recepts" value="0">
+          </div>
+        </div>
+        
+        <button class="ten wide column positive ui button" type="submit">Estimate</button>
+      </form>
+    </div>
+    <div class="two wide column"></div>
+  </div>
 {% endblock %}
 
 {% block javascript %}
+<script> 
+  $(document).ready(function(){
+    $('.ui.dropdown').dropdown();
+ });
 
+ $('form.property-info')
+  .form({
+    on: 'blur',
+    fields: {
+      postcode: {
+        identifier  : 'post_code',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter a value'
+          }
+        ]
+      },
+      dropdown: {
+        identifier  : 'property_type',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select a dropdown value'
+          }
+        ]
+      }
+    }
+  })
+;
+</script>
 {% endblock %}

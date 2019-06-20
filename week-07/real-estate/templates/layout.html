@@ -3,6 +3,9 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.css">
       <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
@@ -11,7 +14,7 @@
       <title>Estate Estatmation</title>
   </head>
   <body class="container">
-    <header class="header">
+    <header class="nav">
       <img class="header-logo" src="{{ url_for('static', filename='img/logo.png') }}">
       <ol class="header-navigator">
         <li class="navigator__item"><a href="/">Messages</a></li>

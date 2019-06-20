@@ -19,7 +19,7 @@ def read_json_data():
 # 'price_change_summary', we have price_change attr
 # 'displayable_address',  'street_name', 'post_town', 
 # current not use 'price_modifier', 'short_description','description', 'agent_name', 'first_published_date', 'status', 'county', 'listing_id'
-useful_feature = ['outcode', 'latitude', 'longitude', 'property_type','new_home',  'num_bathrooms', 'num_bedrooms', 'num_floors', 'num_recepts',  'price',  'last_published_date', 'price_change']
+useful_feature = ['displayable_address','outcode', 'latitude', 'longitude', 'property_type','new_home',  'num_bathrooms', 'num_bedrooms', 'num_floors', 'num_recepts',  'price',  'last_published_date', 'price_change']
 def clean_data(data):
   indexNames = data[data['price'] == 0].index
   data.drop(indexNames, inplace=True)
@@ -63,6 +63,13 @@ def scaler_price(data):
   return scaled_features
 
 
+def convert_lat_log(data):
+  data['x'] = data.apply(lambda x: math.cos(x['latitude']) * math.cos(x['longitude']), axis=1)
+  data['y'] = data.apply(lambda x: math.cos(x['latitude']) * math.sin(x['longitude']), axis=1)
+  data['z'] = data.apply(lambda x: math.sin(x['latitude']), axis=1) 
+  data.drop(['longitude', 'latitude'], axis=1, inplace=True)
+  return data
+
 def convert_features(data):
   # turn 'property_type' to vector
   dummies_Property_Type = pd.get_dummies(data['property_type'], prefix= 'property_type')
@@ -82,10 +89,12 @@ def convert_features(data):
 
 
 
-def eda_data(data):
+def eda_data():
   raw_data = read_json_data()
   data = raw_data[useful_feature]
   eda_data = fill_missing_value(data)
+  # property_type_keys = data.groupby(['property_type']).groups.keys()
+  return eda_data
   # @Claire Draw EDA figure
 
 
@@ -95,11 +104,11 @@ def get_trainning_data():
   data = raw_data[training_features]
   data = clean_data(data)
   data = fill_missing_value(data)  
-  
   train_df = convert_features(data)
   return train_df
 
 # result = get_trainning_data()
-# result
+
+# eda_data()
 
 #%%

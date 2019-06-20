@@ -21,3 +21,7 @@
 
 ## 
 ##https://api.zoopla.co.uk/api/v1/property_listings.json?page_number=1&page_size=100&listing_status=sale&include_sold=1&area=Somerset&county=somerset&api_key=9dud55d9tr4ptf7umqt4rmf6
+
+
+
+https://api.zoopla.co.uk/api/v1/area_value_graphs.js?area=BS20&output_type=outcode&api_key=9dud55d9tr4ptf7umqt4rmf6

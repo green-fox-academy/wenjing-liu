@@ -1,14 +1,14 @@
-from eda import get_trainning_data
+from . import get_trainning_data
 from statistics import mean
 import matplotlib.pyplot as plt
 from sklearn import linear_model, preprocessing, metrics, neighbors, tree, naive_bayes, svm
 from sklearn.model_selection import cross_val_predict, train_test_split
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.ensemble import RandomForestRegressor
-
+import joblib
 
 # score = 0.639
-def train_linear_model():
+def train_linear_model(es_data):
   data = get_trainning_data()
 
   # Get xs and y
@@ -22,7 +22,8 @@ def train_linear_model():
   
   score = lr_model.score(X_test, y_test)
   print("Linear regression Accuracy:{0:.3f}".format(score),"\n")
-
+  joblib.dump(lr_model, 'finalized_model.sav')
+  return lr_model.predict(es_data)
 # train_linear_model()
 
 
@@ -59,6 +60,6 @@ def train_RandomForestRegressor():
   y_test_pre = regr.predict(X_test)
   print("Random Forest Regressor:",metrics.r2_score(y_test, y_test_pre))
 
-train_RandomForestRegressor()
+# train_RandomForestRegressor()
 
 

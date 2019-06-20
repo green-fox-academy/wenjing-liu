@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="ui grid">
+  <div class="two wide column"></div>
+  <div class="twelve wide column">
+    <div class="ui huge breadcrumb">
+      <a class="section" href="/">Go back</a>
+    </div>
+    <h1>Result: {{result}}</h1>
+
+    <div class="ui divider"></div>
+
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Your Property Information</p>
+      </div>
+      <div class="ui segments">
+        <div class="ui segment">
+          <p>Post code: {{property['post_code']}}</p>
+        </div>
+        <div class="ui segment">
+          <p>New one: {{ 'Yes' if property['new_home'] == 1 else 'No'}}</p>
+        </div>
+        <div class="ui segment">
+          <p>Property type: {{property['property_type']}}</p>
+        </div>
+        <div class="ui segment">
+          <p>Bedroom number: {{property['num_bedrooms']}}</p>
+        </div>
+        <div class="ui segment">
+          <p>Bathroom number: {{property['num_bathrooms']}}</p>
+        </div>
+        <div class="ui segment">
+          <p>Floor number: {{property['num_floors']}}</p>
+        </div>
+        <div class="ui segment">
+          <p>Reception number: {{property['num_recepts']}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="two wide column"></div>
+</div>
+  
+
+  
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

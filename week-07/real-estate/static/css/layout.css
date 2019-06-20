@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-.header, .footer {
+.nav, .footer {
   height: 80px;
   background-color: #3e3a3a;
   color: white;
@@ -42,7 +42,7 @@
 
 .content {
   margin: 50px 200px;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 230px);
 }
 
 .introduction {
