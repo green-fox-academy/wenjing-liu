@@ -1,4 +1,4 @@
-from eda import get_trainning_data
+from . import get_trainning_data
 from statistics import mean
 import matplotlib.pyplot as plt
 from sklearn import linear_model, preprocessing, metrics, neighbors, tree, naive_bayes, svm
@@ -42,7 +42,7 @@ def train_KNeighborsRegressor():
   score = kng.score(X_test, y_test)
   print("K Neighbors Regressor Accuracy:{0:.3f}".format(score),"\n")
 
-train_KNeighborsRegressor()
+# train_KNeighborsRegressor()
 
 
 # score = 0.723
@@ -60,6 +60,6 @@ def train_RandomForestRegressor():
   y_test_pre = regr.predict(X_test)
   print("Random Forest Regressor:",metrics.r2_score(y_test, y_test_pre))
 
-train_RandomForestRegressor()
+# train_RandomForestRegressor()
 
 
